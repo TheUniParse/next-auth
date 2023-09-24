@@ -1,0 +1,9 @@
+1. create next app project:
+pnpm create next-app@latest --use-pnpm
+
+2. install next-auth
+pnpm add next-auth
+
+3. create environment variables in .env
+NEXTAUTH_URL="app url as: http://localhost:3000"
+NEXTAUTH_SECRET="random hash as: openssl rand -base64 32"
