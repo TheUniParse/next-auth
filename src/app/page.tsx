@@ -6,7 +6,7 @@ export default async function Home() {
   return (
     <main className='text-center'>
       <h1>Home</h1>
-      <p>profie: {session?.user?.name || 'Not signed in'}</p>
+      <p>profile: {session?.user?.name || 'Not signed in'}</p>
     </main>
   )
 }
