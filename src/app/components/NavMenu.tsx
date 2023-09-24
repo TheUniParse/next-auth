@@ -8,6 +8,7 @@ export default function NavMenu() {
       <RouteLink path='/' name='Home' />
       <RouteLink path='/protected' name='Protected Route' />
       <RouteLink path='/serverAction' name='Server Action' />
+      <RouteLink path='/apiFromClient' name='API From Client' />
     </nav>
   )
 }
