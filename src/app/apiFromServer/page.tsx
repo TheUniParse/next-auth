@@ -1,7 +1,7 @@
 import { headers } from 'next/headers'
 
 export default async function Page() {
-  const url = 'http://localhost:3000/api/whoAmI'
+  const url = `${process.env.NEXTAUTH_URL}/api/whoAmI`
   const res = await fetch(url, {
     method: 'GET',
     headers: headers(),
