@@ -1,9 +1,28 @@
-1. create next app project:
+# create next app project:
 pnpm create next-app@latest --use-pnpm
 
-2. install next-auth
+# install next-auth
 pnpm add next-auth
 
-3. create environment variables in .env
+# create environment variables in .env
 NEXTAUTH_URL="app url as: http://localhost:3000"
 NEXTAUTH_SECRET="random hash as: openssl rand -base64 32"
+
+# set auth credentials from auth provider (ex github)
+1. in github.com navigate to
+  settings
+  developers settings (scroll down)
+  OAuth Apps (click "Register a new application" button)
+or just navigate to
+https://github.com/settings/applications/new
+
+2. register a new app
+Application name: next-auth
+homepage url: http://localhost:3000
+authorization callback url:
+  http://localhost:3000/api/auth/callback/github
+click on "register application"
+
+3. copy credentials:
+copy "Client ID" to .env GITHUB_ID
+copy "Client secrets" to .env GITHUB_SECRET
