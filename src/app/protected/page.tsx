@@ -8,7 +8,7 @@ export default async function Page() {
 
   return (
     <div className='text-center'>
-      <h1>protected</h1>
+      <h1>Protected Route</h1>
       <p>you will only see this if you are authenticated</p>
     </div>
   )
