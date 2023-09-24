@@ -6,7 +6,8 @@ export default function NavMenu() {
   return (
     <nav className='border-solid border-[thin] border-gray-400 rounded-lg p-1'>
       <RouteLink path='/' name='Home' />
-      <RouteLink path='/protected' name='Protected' />
+      <RouteLink path='/protected' name='Protected Route' />
+      <RouteLink path='/serverAction' name='Server Action' />
     </nav>
   )
 }
