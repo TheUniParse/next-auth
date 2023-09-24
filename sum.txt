@@ -26,3 +26,6 @@ click on "register application"
 3. copy credentials:
 copy "Client ID" to .env GITHUB_ID
 copy "Client secrets" to .env GITHUB_SECRET
+
+# create nextAuth api router
+/app/api/auth/[...nextauth]/route.ts
