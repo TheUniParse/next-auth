@@ -2,6 +2,12 @@
 const nextConfig = {
   experimental: {
     serverActions: true
+  },
+  images: {
+    // allow all domains (from auth providers)
+    remotePatterns: [
+      { hostname: '**' }
+    ]
   }
 }
 
