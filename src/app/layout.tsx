@@ -1,13 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
 import { getServerSession } from 'next-auth'
 import SessionProvider from './components/SessionProvider'
 import Auth from './components/Auth'
 import NavMenu from './components/NavMenu'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,7 +19,7 @@ export default async function RootLayout(props: Props) {
 
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body>
         <SessionProvider session={session}>
           <Auth />
           <NavMenu />
