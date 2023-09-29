@@ -1,18 +1,19 @@
 import { getServerSession } from 'next-auth'
-import { WhoAmIButton } from './WhoAmIButton'
+import { WhoAmI } from './WhoAmI'
 
 export default function page() {
-  const whoAmI = async () => {
-    'use server'
-    const session = await getServerSession()
-    return session?.user?.name || 'Not Logged In'
-  }
-
   return (
     <div className='text-center'>
       <h1>Server Action</h1>
 
-      <WhoAmIButton whoAmIAction={whoAmI} />
+      <WhoAmI whoAmIAction={whoAmIAction} />
     </div>
   )
+}
+
+// server action
+async function whoAmIAction() {
+  'use server'
+  const session = await getServerSession()
+  return session?.user
 }
