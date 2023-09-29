@@ -8,7 +8,7 @@ export default function Auth() {
   return (
     <div className='border-solid border-gray-400 p-1 border-[thin] rounded-lg gap-x-1 flex items-center mb-1'>
       <Image
-        className='rounded-full'
+        className='rounded-full select-none'
         src={session?.user?.image || userProfileUrl}
         alt='user profile'
         width={40}
@@ -18,7 +18,7 @@ export default function Auth() {
       {session?.user?.name || 'Not signed in'}
 
       <button
-        className='ml-auto'
+        className='ml-auto select-none'
         onClick={() => (!session ? signIn() : signOut())}>
         {!session ? 'Sign In' : 'Sign Out'}
       </button>
